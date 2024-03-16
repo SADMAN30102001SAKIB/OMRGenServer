@@ -93,7 +93,7 @@ def generate_pdf():
     text_details_2 = [
         (
             70,
-            750,
+            740,
             iName,
             16,
             "Helvetica-Bold",
@@ -102,7 +102,7 @@ def generate_pdf():
         ),
         (
             70,
-            735,
+            725,
             pName,
             9,
             "Helvetica-BoldOblique",
@@ -146,7 +146,7 @@ def generate_pdf():
         rects_details_2.append(
             (
                 65,
-                695,
+                685,
                 255,
                 30,
                 color,
@@ -167,8 +167,8 @@ def generate_pdf():
         rects_details_2.append(
             (
                 370,
-                695,
-                185,
+                690,
+                220,
                 30,
                 color,
             )
@@ -211,14 +211,14 @@ def generate_pdf():
             if box1Height > 0:
                 rects_details_2.append((75, 165, 120, box1Height * 19.2, color))
                 rects_details_2.append((25, 164, 35, box1Height * 19.2, color))
-            rects_details_2.append((215, 170, 205, 22 * 24, color))
-            rects_details_2.append((405, 190, 240, 21 * 24, color))
+            rects_details_2.append((215, 170, 205, 22 * 23, color))
+            rects_details_2.append((405, 190, 240, 21 * 22.5, color))
         elif eraseQuestionCount >= 18:
             box2Height = eraseQuestionCount - 18
             if box2Height > 0:
                 rects_details_2.append((265, 179, 120, box2Height * 21.2, color))
                 rects_details_2.append((215, 179, 35, box2Height * 21.2, color))
-            rects_details_2.append((405, 190, 240, 21 * 24, color))
+            rects_details_2.append((405, 190, 240, 21 * 22.5, color))
         elif eraseQuestionCount > 0:
             rects_details_2.append((455, 210, 115, eraseQuestionCount * 24, color))
             rects_details_2.append((405, 210, 35, eraseQuestionCount * 24, color))
@@ -246,7 +246,3 @@ def generate_pdf():
 @app.route("/")
 def hello():
     return "Hello"
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
