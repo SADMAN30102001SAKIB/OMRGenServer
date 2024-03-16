@@ -111,8 +111,8 @@ def generate_pdf():
         ),
     ]
 
-    input_pdf_path = "input.pdf"
-    output_pdf_path = "output.pdf"
+    input_pdf_path = "mysite/input.pdf"
+    output_pdf_path = "mysite/output.pdf"
 
     color = "white"
     rects_details_1 = [
